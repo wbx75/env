@@ -1,0 +1,36 @@
+set nocompatible
+set number
+set smartindent
+set autoindent
+set ruler
+set mouse=a
+filetype plugin indent on
+syntax on
+runtime! config/**/*.vim
+
+" Initialisation de pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
+map <A-Left>  :tabp<CR>
+map <A-Right> :tabn<CR>
+
+" PEP8 standards
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+set encoding=utf-8
+

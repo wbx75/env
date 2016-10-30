@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/private/tmp/test'
+let g:netrw_dirhist_2='/private/tmp/test/src'
+let g:netrw_dirhist_3='/private/tmp/test/src/java'
+let g:netrw_dirhist_4='/private/tmp/test/src/java/toto'
