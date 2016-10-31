@@ -24,8 +24,8 @@ function ssht() {
 
 # alias
 if [[ $platform == 'linux' ]]; then
-    alias ll='ls --colors -alFh'
-    alias l='ls --colors -lFh'
+    alias ll='ls --color -alFh'
+    alias l='ls --color -lFh'
 else
     alias ll='ls -alFhG'
     alias l='ls -lFhG'	
