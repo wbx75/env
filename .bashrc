@@ -24,13 +24,15 @@ function ssht() {
 
 # alias
 if [[ $platform == 'linux' ]]; then
-    alias ll='ls --color -alFh'
     alias l='ls --color -lFh'
+    alias ll='ls --color -alFh'
 else
+    alias l='ls -lFhG'
     alias ll='ls -alFhG'
-    alias l='ls -lFhG'	
 fi
 
+alias lo="l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
+alias llo="ll | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
 
 # prompt
 if [ $(id -u) -eq 0 ]; then
